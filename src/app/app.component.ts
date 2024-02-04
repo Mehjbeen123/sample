@@ -8,6 +8,8 @@ import { FormBuilder } from '@angular/forms';
 })
 export class AppComponent {
   title = 'reactive';
+  public test:any;
+  public test2:any
   public myForm:any;
   constructor(private fb:FormBuilder){
     this.myForm = this.fb.group({
