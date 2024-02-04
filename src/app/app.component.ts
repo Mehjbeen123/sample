@@ -26,7 +26,7 @@ export class AppComponent {
     })
   }
   onSubmit(){
-    console.log(this.myForm)
+    // console.log(this.myForm)
 
   }
   get f(){
