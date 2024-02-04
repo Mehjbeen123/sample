@@ -1,0 +1,73 @@
+<section class="container">
+  <header>Registration Form</header>
+
+  <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="column">
+      <div class="input-box">
+        <input type="text" placeholder="First Name" formArrayName="fname"/>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Last Name" formArrayName="lname" />
+      </div>
+    </div>    
+
+    <div class="input-box">
+      <input type="text" placeholder="Email" />
+    </div>
+
+    <div class="column">
+      <div class="input-box">
+        <input type="password" placeholder="Password" formArrayName="pass"/>
+        
+      </div>
+      <div class="input-box">
+        <input type="date" placeholder="Date of Birth"formArrayName="dob" />
+      </div>
+    </div>
+
+    
+
+    <div class="gender-box">
+      <h3>Gender</h3>
+      <div class="gender-option">
+        <div class="gender">
+          <input type="radio" value="male" id="check-male" formArrayName="gender"/>
+          <label for="check-male">Male</label>
+        </div>
+        <div class="gender">
+          <input type="radio" value="female" id="check-female" formArrayName="gender" />
+          <label for="check-female">Female</label>
+        </div>
+        <div class="gender">
+          <input type="radio" value="other" id="check-other" formArrayName="gender"/>
+          <label for="check-other">Prefer not to say</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-box address">
+      <label>Address</label>
+      <input type="text" placeholder="Street address" formArrayName="street"/>
+      <div class="column">
+        <div class="select-box">
+          <select name="country" formArrayName="con">
+            <option hidden>Country</option>
+            <option>America</option>
+            <option>Japan</option>
+            <option>India</option>
+            <option>Nepal</option>
+          </select>
+        </div>
+        <input type="text" placeholder="City" formArrayName="city" />
+      </div>
+      <div class="column">
+        <input type="text" placeholder="Region" formArrayName="region" />
+        <input type="number" placeholder="Postal code" formArrayName="postal"/>
+      </div>
+    </div>
+    
+
+    <input type="submit" value="Submit" class="submit-btn"> 
+    <!-- [disabled]="!reactiveForm.valid" -->
+  </form>
+</section>
